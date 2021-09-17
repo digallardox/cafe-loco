@@ -6,13 +6,13 @@ function NavBar(){
     <div>
     <Navbar bg="light" expand="lg">
   <Container>
-    <Navbar.Brand href="#home">CAFÉ LOCO</Navbar.Brand>
+    <Navbar.Brand as={Link} to={"/"}>CAFÉ LOCO</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
+      <Nav className="ms-auto">
         <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
         <Nav.Link as={Link} to={"/rank"}>Ranking</Nav.Link>
-        <Nav.Link as={Link} to={"/new"}>Add Coffee</Nav.Link>
+        <Nav.Link as={Link} to={"/add"}>Add Coffee</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>
