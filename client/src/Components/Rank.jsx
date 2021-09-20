@@ -19,6 +19,7 @@ const config = {
 
 function Rank(){
     const [data, setData] = useState([]);
+    const [toggle, setToggle] = useState(false);
 
     useEffect(() => {
         const getData = async () => {
@@ -26,9 +27,11 @@ function Rank(){
         setData(res.data.records)
         }
         getData();
-    },[])
+    },[toggle])
 
-    async function handleVote(){
+    async function handleVote(id, votes){
+        await axios.patch(`${URL}/${id}`, {fields: {votes: votes + 1}}, config);
+        setToggle(toggle => !toggle);
 
     }
 
@@ -45,7 +48,7 @@ function Rank(){
                     <h2>#{index + 1}</h2>
                     <h4>{item.fields.name}</h4>
                     <p>votes: {item.fields.votes}</p>
-                    <button onClick={handleVote}>Vote</button>
+                    <button onClick={()=> handleVote(item.id, item.fields.votes)}>Vote</button>
                 </div>
             )
         })}
