@@ -15,6 +15,7 @@ import axios from 'axios';
 function Add(){
     const [name, setName] = useState("");
     const [notes, setNotes] = useState("");
+    const [URL, setURL] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -24,6 +25,7 @@ function Add(){
     };
         const res = await axios.post(URL, { fields }, config);
         setName("");
+        setURL("");
         setNotes("");
     };
 
@@ -38,6 +40,11 @@ function Add(){
             <input value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder = "enter name"
+            /><br/>
+            <label>Image URL</label>
+            <input value={URL}
+            onChange={(e) => setURL(e.target.value)}
+            placeholder = "enter URL"
             /><br/>
             <label>Toppings</label>
             <input value={notes}

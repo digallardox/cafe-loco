@@ -26,10 +26,12 @@ function AllCoffee() {
 
     
     return (
-        <div className="coffeeCards">
+        <>
         <h2>All Coffee</h2>
+        <div id="cardsDiv">
         {data.map((item) => {
             return (
+            <div id="cards">
             <Col>
             <Card>
                 <Card.Img variant="top" src={item.fields.image} />
@@ -41,9 +43,11 @@ function AllCoffee() {
                 </Card.Body>
             </Card>
             </Col>
+            </div>
             )
         })}
         </div>
+        </>
     )
 };
 
