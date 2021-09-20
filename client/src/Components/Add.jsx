@@ -34,7 +34,7 @@ function Add(){
             <Helmet>
 				<title>Cafe Loco | Add Coffee</title>
 			</Helmet>
-            <h2>Add Coffee</h2>
+            <h2 className="title">Add Coffee</h2>
             <form onSubmit={handleSubmit}>
             <label>Name</label>
             <input value={name}

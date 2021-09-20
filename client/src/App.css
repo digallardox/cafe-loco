@@ -8,13 +8,30 @@ html {
 
 #cardsDiv {
   display: flex;
-  margin: auto;
   flex-direction: row;
   flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
 }
 
-#cards {
-  max-width: 45%;
 
+/* Media Query for S, M, L */
+#cards {
+  max-width: 48%;
+  margin: 1%;
+}
+
+.title {
+  text-align: left;
+  margin-left: 1%;
+  margin-top: 2%;
+}
+
+#rankDiv {
+  margin: 28px;
+}
+
+button {
+  border: none;
+  padding: 8px 20px;
 }

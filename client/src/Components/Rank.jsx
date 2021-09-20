@@ -3,6 +3,8 @@ import AllCoffee from './AllCoffee.jsx';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
+// How to sort by value in table
+// How to add to value on button click
 
 let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -26,26 +28,24 @@ function Rank(){
         getData();
     },[])
 
-    useEffect(() => {
-        const getVote = async () => {
-        
-        }
-    })
+    async function handleVote(){
+
+    }
 
     return (
         <div>
             <Helmet>
 				<title>Cafe Loco | Ranking</title>
 			</Helmet>
-            <h2 className="pageTitles">Ranking</h2>
-            {data.map((item) => {
+            <h2 className="title">Ranking</h2>
+            {data.map((item, index) => {
             // Empty Airtable fields will create an unattached button.
             return (
-                <div>
-                    <h2>{item.fields.name}</h2>
-                    <p>{item.fields.notes}</p>
-                    <p>{item.fields.votes}</p>
-                    <button>Vote</button>
+                <div id="rankDiv">
+                    <h2>#{index + 1}</h2>
+                    <h4>{item.fields.name}</h4>
+                    <p>votes: {item.fields.votes}</p>
+                    <button onClick={handleVote}>Vote</button>
                 </div>
             )
         })}
