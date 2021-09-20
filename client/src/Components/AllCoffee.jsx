@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-// import { Card, Button, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
 
 let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -26,13 +26,21 @@ function AllCoffee() {
 
     
     return (
-        <div>
+        <div className="coffeeCards">
+        <h2>All Coffee</h2>
         {data.map((item) => {
             return (
-                <div>
-                    <h2>{item.fields.name}</h2>
-                    <p>{item.fields.notes}</p>
-                </div>
+            <Col>
+            <Card>
+                <Card.Img variant="top" src={item.fields.image} />
+                <Card.Body>
+                <Card.Title>{item.fields.name}</Card.Title>
+                <Card.Text>
+                    This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </Card.Text>
+                </Card.Body>
+            </Card>
+            </Col>
             )
         })}
         </div>
