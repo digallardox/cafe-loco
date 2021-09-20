@@ -22,7 +22,6 @@ function Rank(){
         const getData = async () => {
         const res = await axios.get(URL, config);
         setData(res.data.records)
-        console.log(data);
         }
         getData();
     },[])
@@ -40,12 +39,13 @@ function Rank(){
 			</Helmet>
             <h2 className="pageTitles">Ranking</h2>
             {data.map((item) => {
+            // Empty Airtable fields will create an unattached button.
             return (
                 <div>
                     <h2>{item.fields.name}</h2>
                     <p>{item.fields.notes}</p>
                     <p>{item.fields.votes}</p>
-                    <button onClick="handleVote">Vote</button>
+                    <button>Vote</button>
                 </div>
             )
         })}
