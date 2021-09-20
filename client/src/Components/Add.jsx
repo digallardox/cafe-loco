@@ -1,4 +1,3 @@
-import { Form, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
@@ -24,7 +23,8 @@ function Add(){
         notes,
     };
         const res = await axios.post(URL, { fields }, config);
-        console.log(res.data);
+        setName("");
+        setNotes("");
     };
 
     return (
@@ -34,9 +34,15 @@ function Add(){
 			</Helmet>
             <form onSubmit={handleSubmit}>
             <label>Name</label>
-            <input value={name} onChange={(e) => setName(e.target.value)}/><br/>
+            <input value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder = "enter name"
+            /><br/>
             <label>Toppings</label>
-            <input value={notes} onChange={(e) => setNotes(e.target.value)}/><br/>
+            <input value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+            placeholder = "enter notes"
+            /><br/>
             <button type="submit">Submit</button>
             </form>
         </div>

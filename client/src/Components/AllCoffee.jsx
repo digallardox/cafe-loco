@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Card, Button, Row, Col } from 'react-bootstrap';
+// import { Card, Button, Row, Col } from 'react-bootstrap';
 
 let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -20,7 +20,6 @@ function AllCoffee() {
         const getData = async () => {
         const res = await axios.get(URL, config);
         setData(res.data.records)
-        console.log(data);
         }
         getData();
     },[])
@@ -28,7 +27,6 @@ function AllCoffee() {
     
     return (
         <div>
-
         {data.map((item) => {
             return (
                 <div>
