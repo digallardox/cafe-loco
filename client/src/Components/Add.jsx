@@ -16,17 +16,17 @@ import { Form } from 'react-bootstrap';
 function Add(){
     const [name, setName] = useState("");
     const [notes, setNotes] = useState("");
-    const [URL, setURL] = useState("");
+    const [image, setImage] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const fields = {
         name,
-        notes,
+        image,
     };
         const res = await axios.post(URL, { fields }, config);
         setName("");
-        setURL("");
+        setImage("");
         setNotes("");
     };
 
@@ -35,20 +35,21 @@ function Add(){
             <Helmet>
 				<title>Cafe Loco | Add Coffee</title>
 			</Helmet>
+
             <div id="addCoffeeDiv">
             <form onSubmit={handleSubmit}>
             <h2>Add Coffee</h2>
-            <label>Name</label>
+            <label>Name</label><br/>
             <input value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder = "enter name"
             /><br/>
-            <label>Image URL</label>
-            <input value={URL}
-            onChange={(e) => setURL(e.target.value)}
+            <label>Image URL</label><br/>
+            <input value={image}
+            onChange={(e) => setImage(e.target.value)}
             placeholder = "enter URL"
             /><br/>
-            <label>Description</label>
+            <label>Description</label><br/>
             <input value={notes}
             onChange={(e) => setNotes(e.target.value)}
             placeholder = "enter notes"

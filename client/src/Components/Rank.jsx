@@ -43,11 +43,12 @@ function Rank(){
 			</Helmet>
 
             <h2>Ranking</h2>
+            <div id="cardsDiv">
 
             {data.map((item, index) => {
             return (
-            <div id="rankDiv">
-                                <div id="cards">
+            
+            <div id="cards">
             <Col>
             <Card>
                 <Card.Img variant="top" src={item.fields.image} />
@@ -62,9 +63,9 @@ function Rank(){
             </Card>
             </Col>
             </div>
-            </div>
             )
             })}
+            </div>
             </>
             )
 }

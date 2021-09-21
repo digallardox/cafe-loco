@@ -11,7 +11,8 @@ html {
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 
@@ -21,18 +22,21 @@ html {
   margin: 1%;
 }
 
-.title {
-  text-align: left;
-  margin-left: 1%;
-  margin-top: 2%;
-}
-
-#rankDiv {
-  margin: 28px;
-}
+/* #cards:hover {
+  transform: scale(1.05);
+} */
 
 button {
   border: none;
   padding: 8px 20px;
 }
 
+form {
+  text-align: left;
+  width: 100%;
+}
+
+#formDiv {
+  width: 50%;
+  margin: 0 auto;
+}
