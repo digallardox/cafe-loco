@@ -36,24 +36,26 @@ function Rank(){
     }
 
     return (
-        <div>
+        <>
             <Helmet>
 				<title>Cafe Loco | Ranking</title>
 			</Helmet>
-            <h2 className="title">Ranking</h2>
+
+            <h2>Ranking</h2>
+
             {data.map((item, index) => {
-            // Empty Airtable fields will create an unattached button.
             return (
-                <div id="rankDiv">
+            <div id="rankDiv">
                     <h2>#{index + 1}</h2>
                     <h4>{item.fields.name}</h4>
                     <p>votes: {item.fields.votes}</p>
+
                     <button onClick={()=> handleVote(item.id, item.fields.votes)}>Vote</button>
                 </div>
             )
-        })}
-        </div>
-    )
+            })}
+            </>
+            )
 }
 
 export default Rank;

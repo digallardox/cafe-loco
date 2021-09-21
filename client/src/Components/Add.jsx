@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
+import { Form } from 'react-bootstrap';
 
     let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
     let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -34,8 +35,9 @@ function Add(){
             <Helmet>
 				<title>Cafe Loco | Add Coffee</title>
 			</Helmet>
-            <h2 className="title">Add Coffee</h2>
+            <div id="addCoffeeDiv">
             <form onSubmit={handleSubmit}>
+            <h2>Add Coffee</h2>
             <label>Name</label>
             <input value={name}
             onChange={(e) => setName(e.target.value)}
@@ -53,6 +55,7 @@ function Add(){
             /><br/>
             <button type="submit">Submit</button>
             </form>
+            </div>
         </div>
     )
 }

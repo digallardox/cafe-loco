@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col, Button } from 'react-bootstrap';
 
 let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -41,8 +41,8 @@ function AllCoffee() {
                 <Card.Text>
                     This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
                 </Card.Text>
-                <button>Learn More</button>
-                <button>Upvote</button>
+                <Button variant="primary">Learn More</Button>{' '}
+                <Button variant="secondary">Upvote</Button>
                 </Card.Body>
             </Card>
             </Col>
