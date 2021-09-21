@@ -48,7 +48,7 @@ function Add(){
             onChange={(e) => setURL(e.target.value)}
             placeholder = "enter URL"
             /><br/>
-            <label>Toppings</label>
+            <label>Description</label>
             <input value={notes}
             onChange={(e) => setNotes(e.target.value)}
             placeholder = "enter notes"

@@ -9,7 +9,6 @@ import AllCoffee from './Components/AllCoffee.jsx';
 import Add from './Components/Add.jsx';
 import Rank from './Components/Rank';
 import PageNotFound from './Components/PageNotFound';
-import Footer from './Components/Footer.jsx';
 
 function App() {
   return (
@@ -32,7 +31,6 @@ function App() {
 				</Route>
 				<Route component={PageNotFound} />
 			</Switch>
-			<Footer />
 		</div>
 	);
 }

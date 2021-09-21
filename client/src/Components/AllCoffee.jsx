@@ -37,12 +37,9 @@ function AllCoffee() {
                 <Card.Img variant="top" src={item.fields.image} />
                 <Card.Body>
                 <Card.Title>{item.fields.name}</Card.Title>
-                <p><u>{item.fields.votes} votes</u></p>
                 <Card.Text>
                     This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
                 </Card.Text>
-                <Button variant="primary">Learn More</Button>{' '}
-                <Button variant="secondary">Upvote</Button>
                 </Card.Body>
             </Card>
             </Col>

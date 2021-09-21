@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet';
 import AllCoffee from './AllCoffee.jsx';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Card, Row, Col, Button } from 'react-bootstrap';
 
 // How to sort by value in table
 // How to add to value on button click
@@ -46,12 +47,22 @@ function Rank(){
             {data.map((item, index) => {
             return (
             <div id="rankDiv">
-                    <h2>#{index + 1}</h2>
-                    <h4>{item.fields.name}</h4>
-                    <p>votes: {item.fields.votes}</p>
-
-                    <button onClick={()=> handleVote(item.id, item.fields.votes)}>Vote</button>
-                </div>
+                                <div id="cards">
+            <Col>
+            <Card>
+                <Card.Img variant="top" src={item.fields.image} />
+                <Card.Body>
+                <Card.Title>#{index +1} : {item.fields.name}</Card.Title>
+                <p><u>{item.fields.votes} votes</u></p>
+                <Card.Text>
+                    This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </Card.Text>
+                <button onClick={()=> handleVote(item.id, item.fields.votes)}>Vote</button>
+                </Card.Body>
+            </Card>
+            </Col>
+            </div>
+            </div>
             )
             })}
             </>
