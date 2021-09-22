@@ -25,10 +25,18 @@ function Rank(){
     useEffect(() => {
         const getData = async () => {
         const res = await axios.get(URL, config);
-        setData(res.data.records)
+        res.data.records.sort(
+            (coffeeOne, coffeeTwo)=> {
+                if (coffeeOne.fields.votes > coffeeTwo.fields.votes) {
+                    return -1;
+                }
+            }
+        );
+        setData(res.data.records);
         }
         getData();
     },[toggle])
+
 
     async function handleVote(id, votes){
         await axios.patch(`${URL}/${id}`, {fields: {votes: votes + 1}}, config);

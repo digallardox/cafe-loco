@@ -20,6 +20,11 @@ html {
 #cards {
   max-width: 48%;
   margin: 1%;
+  transition: transform .2s;
+  cursor: pointer;
+}
+#cards:hover {
+transform: scale(1.02);
 }
 
 /* #cards:hover {
@@ -39,4 +44,8 @@ form {
 #formDiv {
   width: 50%;
   margin: 0 auto;
+}
+
+input {
+  width: 100%;
 }
