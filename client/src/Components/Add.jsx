@@ -38,7 +38,7 @@ function Add(){
 
             <div id="addCoffeeDiv">
             <form onSubmit={handleSubmit}>
-            <h2>Add Coffee</h2>
+            <h2 className="title">Add Coffee</h2>
             <label>Name</label><br/>
             <input value={name}
             onChange={(e) => setName(e.target.value)}

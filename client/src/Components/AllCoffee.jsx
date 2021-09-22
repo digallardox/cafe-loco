@@ -27,7 +27,7 @@ function AllCoffee() {
     
     return (
         <>
-        <h2>All Coffee</h2>
+        <h2 className="title">All Coffee</h2>
         <div id="cardsDiv">
         {data.map((item) => {
             return (

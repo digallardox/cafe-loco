@@ -21,6 +21,8 @@ function App() {
 			<Switch>
 				<Route exact path='/'>
 					<CoverImg />
+				</Route>
+				<Route exact path='/coffee'>
 					<AllCoffee />
 				</Route>
 				<Route exact path='/rank'>

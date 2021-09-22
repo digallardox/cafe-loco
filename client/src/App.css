@@ -15,7 +15,6 @@ html {
   margin: 0 auto;
 }
 
-
 /* Media Query for S, M, L */
 #cards {
   max-width: 48%;
@@ -48,4 +47,22 @@ form {
 
 input {
   width: 100%;
+}
+
+.title {
+  margin: 45px;
+}
+
+@media only screen and (max-width: 800px) {
+  #cards {
+  min-width: 98%;
+  margin: 1%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #cards {
+  max-width: 31%;
+  margin: 1%;
+  }
 }

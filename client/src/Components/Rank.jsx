@@ -50,7 +50,7 @@ function Rank(){
 				<title>Cafe Loco | Ranking</title>
 			</Helmet>
 
-            <h2>Ranking</h2>
+            <h2 className="title">Ranking</h2>
             <div id="cardsDiv">
 
             {data.map((item, index) => {
