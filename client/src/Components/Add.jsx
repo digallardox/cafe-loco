@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
-import { Form } from 'react-bootstrap';
+import Footer from './Footer';
 
     let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
     let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -31,33 +31,32 @@ function Add(){
     };
 
     return (
-        <div id="formDiv">
+        <>
             <Helmet>
-				<title>Cafe Loco | Add Coffee</title>
+				<title>Add Coffee</title>
 			</Helmet>
-
-            <div id="addCoffeeDiv">
-            <form onSubmit={handleSubmit}>
             <h2 className="title">Add Coffee</h2>
-            <label>Name</label><br/>
+            <div id="formDiv">
+            <form onSubmit={handleSubmit}>
+            <label>test</label>
             <input value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder = "enter name"
-            /><br/>
-            <label>Image URL</label><br/>
+            placeholder = "Name"/>
+            <label>test</label>
             <input value={image}
             onChange={(e) => setImage(e.target.value)}
-            placeholder = "enter URL"
-            /><br/>
-            <label>Description</label><br/>
-            <input value={notes}
+            placeholder = "Image URL"/>
+            <label>test</label>
+            <textarea value={notes}
             onChange={(e) => setNotes(e.target.value)}
-            placeholder = "enter notes"
-            /><br/>
+            placeholder = "Description"
+            ></textarea>
+            <br/>
             <button type="submit">Submit</button>
             </form>
             </div>
-        </div>
+        <Footer/>
+        </>
     )
 }
 

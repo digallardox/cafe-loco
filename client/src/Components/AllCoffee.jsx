@@ -1,6 +1,9 @@
 import axios from 'axios';
+
+import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import { Card, Row, Col, Button } from 'react-bootstrap';
+import Footer from './Footer';
 
 let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -27,6 +30,9 @@ function AllCoffee() {
     
     return (
         <>
+        <Helmet>
+			<title>All Coffee</title>
+		</Helmet>
         <h2 className="title">All Coffee</h2>
         <div id="cardsDiv">
         {data.map((item) => {
@@ -47,6 +53,7 @@ function AllCoffee() {
             )
         })}
         </div>
+        <Footer/>
         </>
     )
 };

@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet';
-import AllCoffee from './AllCoffee.jsx';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Card, Row, Col, Button } from 'react-bootstrap';
+import { Card, Col} from 'react-bootstrap';
+import Footer from './Footer';
 
 // How to sort by value in table
 // How to add to value on button click
@@ -47,7 +47,7 @@ function Rank(){
     return (
         <>
             <Helmet>
-				<title>Cafe Loco | Ranking</title>
+				<title>Ranking</title>
 			</Helmet>
 
             <h2 className="title">Ranking</h2>
@@ -59,14 +59,17 @@ function Rank(){
             <div id="cards">
             <Col>
             <Card>
-                <Card.Img variant="top" src={item.fields.image} />
+                <Card.Img variant="top" src={item.fields.image}/>
                 <Card.Body>
-                <Card.Title>#{index +1} : {item.fields.name}</Card.Title>
+                <h6>#{index +1}</h6>
+                <Card.Title>{item.fields.name}</Card.Title>
                 <p><u>{item.fields.votes} votes</u></p>
                 <Card.Text>
                     This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
                 </Card.Text>
-                <button onClick={()=> handleVote(item.id, item.fields.votes)}>Vote</button>
+                <button type="submit"
+                onClick={()=> handleVote(item.id, item.fields.votes)}
+                >Vote</button>
                 </Card.Body>
             </Card>
             </Col>
@@ -74,7 +77,8 @@ function Rank(){
             )
             })}
             </div>
-            </>
+            <Footer/>
+        </>
             )
 }
 
