@@ -2,30 +2,6 @@
   text-align: center;
 }
 
-html {
-  background-color:white;
-}
-
-#cardsDiv {
-  display: flex;
-  flex-direction: row;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-}
-
-#cards {
-  max-width: 48%;
-  margin: 1%;
-  transition: transform .2s;
-  cursor: pointer;
-}
-
-#cards:hover {
-transform: scale(1.02);
-}
-
 button {
   border: none;
   padding: 8px 20px;
@@ -81,10 +57,29 @@ footer {
   padding: 25px 50px;
 }
 
-@media only screen and (max-width: 700px) {
+#cardsDiv {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#cards {
+  transition: transform .2s;
+  cursor: pointer;
+  margin: 3%;
+}
+
+#cards:hover {
+transform: scale(1.02);
+}
+
+@media only screen and (min-width: 796px) {
   #cards {
-  min-width: 98%;
-  margin: 1%;
+  max-width: 46%;
+  margin: 2%;
   }
 }
 
