@@ -37,18 +37,19 @@ function Add(){
             <h2 className="title">Add Coffee</h2>
             <div id="formDiv">
             <form onSubmit={handleSubmit}>
-            <label>test</label>
+            <label>Name</label>
             <input value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder = "Name"/>
-            <label>test</label>
+            />
+            <p>space</p>
+            <label>Image URL</label>
             <input value={image}
             onChange={(e) => setImage(e.target.value)}
-            placeholder = "Image URL"/>
-            <label>test</label>
+            />
+            <p>space</p>
+            <label>Description</label>
             <textarea value={notes}
             onChange={(e) => setNotes(e.target.value)}
-            placeholder = "Description"
             ></textarea>
             <br/>
             <button type="submit">Submit</button>
