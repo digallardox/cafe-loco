@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import { Card, Row, Col, Button } from 'react-bootstrap';
-import Footer from './Footer';
 
 let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -53,7 +52,6 @@ function AllCoffee() {
             )
         })}
         </div>
-        <Footer/>
         </>
     )
 };

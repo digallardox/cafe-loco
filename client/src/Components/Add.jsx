@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
-import Footer from './Footer';
 
     let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
     let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -55,7 +54,6 @@ function Add(){
             <button type="submit">Submit</button>
             </form>
             </div>
-        <Footer/>
         </>
     )
 }

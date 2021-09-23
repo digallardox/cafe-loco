@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Card, Col} from 'react-bootstrap';
-import Footer from './Footer';
 
 // How to sort by value in table
 // How to add to value on button click
@@ -61,7 +60,9 @@ function Rank(){
             <Card>
                 <Card.Img variant="top" src={item.fields.image}/>
                 <Card.Body>
-                <h6>#{index +1}</h6>
+                <div id="circle">
+                <h5 id="number">#{index +1}</h5>
+                </div>
                 <Card.Title>{item.fields.name}</Card.Title>
                 <p><u>{item.fields.votes} votes</u></p>
                 <Card.Text>
@@ -77,7 +78,6 @@ function Rank(){
             )
             })}
             </div>
-            <Footer/>
         </>
             )
 }

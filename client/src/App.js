@@ -10,6 +10,7 @@ import Add from './Components/Add.jsx';
 import Rank from './Components/Rank';
 import PageNotFound from './Components/PageNotFound';
 import Footer from './Components/Footer';
+import Home from './Components/Home';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 			<Switch>
 				<Route exact path='/'>
 					<CoverImg />
+					<AllCoffee />
 				</Route>
 				<Route exact path='/coffee'>
 					<AllCoffee />
@@ -34,6 +36,7 @@ function App() {
 				</Route>
 				<Route component={PageNotFound} />
 			</Switch>
+			<Footer />
 		</div>
 	);
 }
