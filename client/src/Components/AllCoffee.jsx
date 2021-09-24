@@ -30,10 +30,10 @@ function AllCoffee() {
     return (
         <>
         <Helmet>
-			<title>All Coffee</title>
+		<title>All Coffee</title>
 		</Helmet>
-        <h2 className="title">All Coffee</h2>
-        <div id="cardsDiv">
+        <h2 className="pageTitle">All Coffee</h2>
+        <div className="cardsDiv">
         {data.map((item) => {
             return (
             <div id="cards">

@@ -34,7 +34,7 @@ function Add(){
             <Helmet>
 				<title>Add Coffee</title>
 			</Helmet>
-            <h2 className="title">Add Coffee</h2>
+            <h2 className="pageTitle">Add Coffee</h2>
             <div id="formDiv">
             <form onSubmit={handleSubmit}>
             <label>Name</label>

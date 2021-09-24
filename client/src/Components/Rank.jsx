@@ -1,21 +1,17 @@
-import { Helmet } from 'react-helmet';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Card, Col} from 'react-bootstrap';
+import { useEffect, useState } from 'react';
 
-// How to sort by value in table
-// How to add to value on button click
-
-let airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
-let airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
-
+const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
+const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/Cafe%20Loco`;
 
 const config = {
         headers: {
             Authorization: `Bearer ${airtableKey}`,
         }
-    }
+    };
 
 function Rank(){
     const [data, setData] = useState([]);
@@ -26,32 +22,30 @@ function Rank(){
         const res = await axios.get(URL, config);
         res.data.records.sort(
             (coffeeOne, coffeeTwo)=> {
-                if (coffeeOne.fields.votes > coffeeTwo.fields.votes) {
-                    return -1;
-                }
-            }
-        );
-        setData(res.data.records);
+            if (coffeeOne.fields.votes > coffeeTwo.fields.votes) {
+            return -1;
+            }});
+            setData(res.data.records);
         }
         getData();
-    },[toggle])
+    },[toggle]);
 
 
-    async function handleVote(id, votes){
+async function handleVote(id, votes){
         await axios.patch(`${URL}/${id}`, {fields: {votes: votes + 1}}, config);
         setToggle(toggle => !toggle);
 
-    }
+    };
 
     return (
         <>
-            <Helmet>
-				<title>Ranking</title>
-			</Helmet>
+        <Helmet>
+		<title>Coffee Ranking</title>
+		</Helmet>
 
-            <h2 className="title">Ranking</h2>
-            <div id="cardsDiv">
+            <h2 className="pageTitle">Coffee Ranking</h2>
 
+            <div className="cardsDiv">
             {data.map((item, index) => {
             return (
             
@@ -60,8 +54,8 @@ function Rank(){
             <Card>
                 <Card.Img variant="top" src={item.fields.image}/>
                 <Card.Body>
-                <div id="circle">
-                <h5 id="number">#{index +1}</h5>
+                <div id="circleDiv">
+                <h5 id="rankNumber"><em>#{index +1}</em></h5>
                 </div>
                 <Card.Title>{item.fields.name}</Card.Title>
                 <p><u>{item.fields.votes} votes</u></p>
@@ -79,7 +73,6 @@ function Rank(){
             })}
             </div>
         </>
-            )
-}
+        )};
 
 export default Rank;
