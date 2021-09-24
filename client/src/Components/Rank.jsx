@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import { Card, Col} from 'react-bootstrap';
 import { useEffect, useState } from 'react';
+import Footer from './Footer';
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -87,6 +88,7 @@ async function handleDislike(id, votes){
             </div>
             )})}
             </div>
+            <Footer />
         </>
     )};
 

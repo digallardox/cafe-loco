@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
+import Footer from './Footer';
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -35,8 +36,8 @@ function Form(){
 		</Helmet>
 
             <h2 className="pageTitle">Submit Coffee</h2>
-
             <div id="formDiv">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
             <form onSubmit={handleSubmit}>
             <label>Coffee Name</label>
             <input 
@@ -52,11 +53,21 @@ function Form(){
             className="input"
             onChange={(e) => setNotes(e.target.value)}>
             </textarea>
-            <button type="submit" >
+            <div className="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                    <label class="form-check-label" for="defaultCheck1">
+                        I agree to terms & conditions
+                        </label>
+                        </div>
+            <button 
+            id="formButton"
+            type="submit" >
             Primary
             </button>
             </form>
             </div>
+            </div>
+            <Footer />
         </>
     )};
 

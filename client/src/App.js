@@ -7,8 +7,8 @@ import NavBar from './Components/NavBar.jsx';
 import Coffee from './Components/Coffee.jsx';
 import Form from './Components/Form.jsx';
 import Rank from './Components/Rank';
+import CoverIMG from './Components/CoverIMG.jsx';
 import PageNotFound from './Components/PageNotFound';
-// import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -20,7 +20,9 @@ function App() {
 
 			<Switch>
 				<Route exact path='/'>
-					{/* <CoverImg /> */}
+					<CoverIMG />
+				</Route>
+				<Route exact path='/coffee'>
 					<Coffee />
 				</Route>
 				<Route exact path='/rank'>
@@ -31,7 +33,6 @@ function App() {
 				</Route>
 				<Route component={PageNotFound} />
 			</Switch>
-			{/* <Footer /> */}
 		</div>
 	);
 }

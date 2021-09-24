@@ -15,8 +15,12 @@ button {
   margin-top: 10px;
 }
 
+#formButton{
+  margin-top: 10px;
+}
+
 #formDiv {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -24,6 +28,7 @@ form {
   text-align: left;
   width: 100%;
   color: black;
+  padding: 20px 20px 40px 20px;
 }
 
 input {
@@ -61,11 +66,6 @@ textarea {
   margin: 0 auto;
 }
 
-.allCoffee {
-  position: absolute;
-  top: 775px;
-}
-
 #cards {
   transition: transform .2s;
   cursor: pointer;
@@ -78,7 +78,6 @@ transform: scale(1.015);
 
 footer {
   background-color: #f8f9fa;
-  position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
@@ -86,7 +85,6 @@ footer {
   height: 100px;
   margin-top: 50px;
   padding: 40px;
-  border-top: 1px solid lightgray;
 }
 
 #cardContentDiv {
@@ -98,7 +96,7 @@ footer {
 }
 
 .coverImgDiv {
-  background: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1522&q=80') no-repeat center center;
+  background: url('https://images.unsplash.com/photo-1541167760496-1628856ab772?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2074&q=80') no-repeat center center;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -108,20 +106,6 @@ footer {
   z-index: -1;
 }
 
-#tester{
-  color: white;
-  margin-top: 250px;
-  z-index: 10;
-  text-shadow: 1px 1px 10px #fff;
-}
-
-#down {
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-}
 
 @media only screen and (min-width: 796px) {
   #cards {
@@ -129,7 +113,7 @@ footer {
   margin: 2%;
   }
   #formDiv {
-  width: 65%;
+  width: 46%;
   }
 }
 
@@ -139,6 +123,6 @@ footer {
   margin: 1%;
   }
   #formDiv {
-  width: 55%;
+  width: 31%;
 }
 }
