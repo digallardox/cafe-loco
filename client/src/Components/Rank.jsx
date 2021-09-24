@@ -32,10 +32,14 @@ function Rank(){
     },[toggle]);
 
 
-async function handleVote(id, votes){
+async function handleLike(id, votes){
         await axios.patch(`${URL}/${id}`, {fields: {votes: votes + 1}}, config);
         setToggle(toggle => !toggle);
+    };
 
+async function handleDislike(id, votes){
+        await axios.patch(`${URL}/${id}`, {fields: {votes: votes - 1}}, config);
+        setToggle(toggle => !toggle);
     };
 
     return (
@@ -60,13 +64,18 @@ async function handleVote(id, votes){
                 </div>
                 <Card.Body>
                 <Card.Title>{item.fields.name}</Card.Title>
-                <p><u>{item.fields.votes} votes</u></p>
+                <p>{item.fields.votes} likes</p>
                 <Card.Text>
-                    This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec commodo mi, a interdum diam. Phasellus ac sapien eu nisl rutrum elementum.
                 </Card.Text>
                 <button type="submit"
-                onClick={()=> handleVote(item.id, item.fields.votes)}
-                >Vote</button>
+                onClick={()=> handleLike(item.id, item.fields.votes)}>
+                + Like
+                </button>
+                <button type="submit"
+                onClick={()=> handleDislike(item.id, item.fields.votes)}>
+                - Dislike
+                </button>
                 </Card.Body>
             </Card>
             </Col>
