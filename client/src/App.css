@@ -20,15 +20,12 @@ button {
 }
 
 #formDiv {
-  width: 90%;
+  width: 88%;
   margin: 0 auto;
 }
 
 form {
   text-align: left;
-  width: 100%;
-  color: black;
-  padding: 20px 20px 40px 20px;
 }
 
 input {
@@ -113,7 +110,7 @@ footer {
   margin: 2%;
   }
   #formDiv {
-  width: 46%;
+  width: 52%;
   }
 }
 
@@ -123,6 +120,6 @@ footer {
   margin: 1%;
   }
   #formDiv {
-  width: 31%;
+  width: 43%;
 }
 }

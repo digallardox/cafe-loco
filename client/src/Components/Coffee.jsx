@@ -15,17 +15,19 @@ const config = {
 
 function Coffee() {
     const [data, setData] = useState([]);
-    const [offset, setOffset] = useState("");
 
     // Initialize Axios request
     useEffect(() => {
         const getData = async () => {
         const res = await axios.get(URL, config);
         setData(res.data.records);
-        setOffset(res.data.offset);
         }
         getData();
     },[]);
+
+function handleLearn(){
+    console.log("trust");
+}
 
     return (
         <>
@@ -49,6 +51,7 @@ function Coffee() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec commodo mi, a interdum diam. Phasellus ac sapien eu nisl rutrum elementum.
                 </Card.Text>
                 <button
+                onClick={handleLearn}
                 type="submit"
                 id="voteButton">
                 Learn More
