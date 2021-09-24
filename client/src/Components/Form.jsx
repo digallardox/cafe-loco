@@ -11,7 +11,7 @@ const config = {
         Authorization: `Bearer ${airtableKey}`,
     }};
 
-function Add(){
+function Form(){
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [notes, setNotes] = useState("");
@@ -31,7 +31,7 @@ function Add(){
     return (
         <>
         <Helmet>
-		<title>Add Coffee</title>
+		<title>Submit Coffee</title>
 		</Helmet>
 
             <h2 className="pageTitle">Submit Coffee</h2>
@@ -52,10 +52,10 @@ function Add(){
             className="input"
             onChange={(e) => setNotes(e.target.value)}>
             </textarea>
-            <button type="submit">Submit</button>
+            <button type="button" class="btn btn-primary">Primary</button>
             </form>
             </div>
         </>
     )};
 
-export default Add;
+export default Form;

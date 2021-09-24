@@ -4,12 +4,11 @@ import { Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import NavBar from './Components/NavBar.jsx';
-import CoverImg from './Components/CoverImg.jsx'
 import Coffee from './Components/Coffee.jsx';
-import Submit from './Components/Submit.jsx';
+import Form from './Components/Form.jsx';
 import Rank from './Components/Rank';
 import PageNotFound from './Components/PageNotFound';
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -21,18 +20,18 @@ function App() {
 
 			<Switch>
 				<Route exact path='/'>
-					<CoverImg />
+					{/* <CoverImg /> */}
 					<Coffee />
 				</Route>
 				<Route exact path='/rank'>
 					<Rank />
 				</Route>
 				<Route exact path='/add'>
-					<Submit />
+					<Form />
 				</Route>
 				<Route component={PageNotFound} />
 			</Switch>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }
