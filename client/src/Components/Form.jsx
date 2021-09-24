@@ -52,7 +52,9 @@ function Form(){
             className="input"
             onChange={(e) => setNotes(e.target.value)}>
             </textarea>
-            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="submit" >
+            Primary
+            </button>
             </form>
             </div>
         </>

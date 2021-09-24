@@ -6,7 +6,7 @@ import { Card, Col} from 'react-bootstrap';
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
-const URL = `https://api.airtable.com/v0/${airtableBase}/tbl1RqNOIVfRyZhso?api_key=${airtableKey}&pageSize=6`;
+const URL = `https://api.airtable.com/v0/${airtableBase}/tbl1RqNOIVfRyZhso?api_key=${airtableKey}`;
 
 const config = {
     headers: {

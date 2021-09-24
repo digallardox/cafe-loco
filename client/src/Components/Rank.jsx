@@ -70,10 +70,12 @@ async function handleDislike(id, votes){
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec commodo mi, a interdum diam. Phasellus ac sapien eu nisl rutrum elementum.
                 </Card.Text>
                 <button type="submit"
+                id="voteButton"
                 onClick={()=> handleLike(item.id, item.fields.votes)}>
                 + Like
                 </button>
                 <button type="submit"
+                id="voteButton"
                 onClick={()=> handleDislike(item.id, item.fields.votes)}>
                 - Dislike
                 </button>

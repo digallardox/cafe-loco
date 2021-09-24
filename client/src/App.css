@@ -11,6 +11,10 @@ button {
   padding: 8px 21px;
 }
 
+#voteButton{
+  margin-top: 10px;
+}
+
 #formDiv {
   width: 75%;
   margin: 0 auto;
@@ -35,7 +39,7 @@ textarea {
 
 #circleDiv{
   border-radius: 50%;
-  border: 2px solid white;
+  border: 3px solid white;
   width: 62px;
   height: 62px;
   padding: 16px 10px 10px 10px;
