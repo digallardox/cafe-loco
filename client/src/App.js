@@ -6,11 +6,10 @@ import { Helmet } from 'react-helmet';
 import NavBar from './Components/NavBar.jsx';
 import CoverImg from './Components/CoverImg.jsx'
 import Coffee from './Components/Coffee.jsx';
-import Add from './Components/Add.jsx';
+import Submit from './Components/Submit.jsx';
 import Rank from './Components/Rank';
 import PageNotFound from './Components/PageNotFound';
 import Footer from './Components/Footer';
-import Home from './Components/Home';
 
 function App() {
   return (
@@ -29,7 +28,7 @@ function App() {
 					<Rank />
 				</Route>
 				<Route exact path='/add'>
-					<Add />
+					<Submit />
 				</Route>
 				<Route component={PageNotFound} />
 			</Switch>

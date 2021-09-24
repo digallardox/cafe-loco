@@ -12,11 +12,8 @@ button {
 }
 
 #formDiv {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
-  background-color: #f8f9fa;
-  padding: 45px;
-  border-radius: 25px;
 }
 
 form {
@@ -87,6 +84,10 @@ footer {
   margin-top: -45px;
 }
 
+.input {
+  margin-bottom: 10px;
+}
+
 
 @media only screen and (min-width: 796px) {
   #cards {
@@ -94,7 +95,7 @@ footer {
   margin: 2%;
   }
   #formDiv {
-  width: 70%;
+  width: 65%;
   }
 }
 
@@ -104,6 +105,6 @@ footer {
   margin: 1%;
   }
   #formDiv {
-  width: 60%;
+  width: 55%;
 }
 }

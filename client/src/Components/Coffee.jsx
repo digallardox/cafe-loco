@@ -8,12 +8,11 @@ const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/Cafe%20Loco`;
 
 const config = {
-        headers: {
-            Authorization: `Bearer ${airtableKey}`,
-        }
-    };
+    headers: {
+        Authorization: `Bearer ${airtableKey}`,
+    }};
 
-function AllCoffee() {
+function Coffee() {
     const [data, setData] = useState([]);
 
     // Initialize Axios request
@@ -56,6 +55,6 @@ function AllCoffee() {
             )})}
             </div>
         </>
-        )};
+    )};
 
-export default AllCoffee;
+export default Coffee;

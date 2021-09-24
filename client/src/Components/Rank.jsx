@@ -8,10 +8,9 @@ const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/Cafe%20Loco`;
 
 const config = {
-        headers: {
-            Authorization: `Bearer ${airtableKey}`,
-        }
-    };
+    headers: {
+        Authorization: `Bearer ${airtableKey}`,
+    }};
 
 function Rank(){
     const [data, setData] = useState([]);
@@ -87,6 +86,6 @@ async function handleDislike(id, votes){
             )})}
             </div>
         </>
-        )};
+    )};
 
 export default Rank;
