@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import NavBar from './Components/NavBar.jsx';
 import CoverImg from './Components/CoverImg.jsx'
-import AllCoffee from './Components/AllCoffee.jsx';
+import Coffee from './Components/Coffee.jsx';
 import Add from './Components/Add.jsx';
 import Rank from './Components/Rank';
 import PageNotFound from './Components/PageNotFound';
@@ -23,10 +23,7 @@ function App() {
 			<Switch>
 				<Route exact path='/'>
 					<CoverImg />
-					<AllCoffee />
-				</Route>
-				<Route exact path='/coffee'>
-					<AllCoffee />
+					<Coffee />
 				</Route>
 				<Route exact path='/rank'>
 					<Rank />

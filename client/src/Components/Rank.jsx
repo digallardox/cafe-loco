@@ -84,8 +84,7 @@ async function handleDislike(id, votes){
             </Col>
             </div>
             </div>
-            )
-            })}
+            )})}
             </div>
         </>
         )};
