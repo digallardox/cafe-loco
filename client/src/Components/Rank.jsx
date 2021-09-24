@@ -17,6 +17,7 @@ function Rank(){
     const [data, setData] = useState([]);
     const [toggle, setToggle] = useState(false);
 
+    // Initialize Axios request
     useEffect(() => {
         const getData = async () => {
         const res = await axios.get(URL, config);
@@ -48,15 +49,16 @@ async function handleVote(id, votes){
             <div className="cardsDiv">
             {data.map((item, index) => {
             return (
-            
+
+            // Begin Cards Render
             <div id="cards">
             <Col>
             <Card>
                 <Card.Img variant="top" src={item.fields.image}/>
-                <Card.Body>
                 <div id="circleDiv">
                 <h5 id="rankNumber"><em>#{index +1}</em></h5>
                 </div>
+                <Card.Body>
                 <Card.Title>{item.fields.name}</Card.Title>
                 <p><u>{item.fields.votes} votes</u></p>
                 <Card.Text>
