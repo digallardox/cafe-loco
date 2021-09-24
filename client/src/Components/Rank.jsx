@@ -56,6 +56,7 @@ async function handleDislike(id, votes){
 
             // Begin Cards Render
             <div id="cards">
+            <div class="shadow p-3 mb-5 bg-white rounded">
             <Col>
             <Card>
                 <Card.Img variant="top" src={item.fields.image}/>
@@ -63,6 +64,7 @@ async function handleDislike(id, votes){
                 <h5 id="rankNumber"><em>#{index +1}</em></h5>
                 </div>
                 <Card.Body>
+                <div id="cardContentDiv">
                 <Card.Title>{item.fields.name}</Card.Title>
                 <p>{item.fields.votes} likes</p>
                 <Card.Text>
@@ -76,9 +78,11 @@ async function handleDislike(id, votes){
                 onClick={()=> handleDislike(item.id, item.fields.votes)}>
                 - Dislike
                 </button>
+                </div>
                 </Card.Body>
             </Card>
             </Col>
+            </div>
             </div>
             )
             })}

@@ -83,6 +83,10 @@ footer {
   margin-top: 25px;
 }
 
+#cardContentDiv {
+  margin-top: -45px;
+}
+
 
 @media only screen and (min-width: 796px) {
   #cards {
@@ -91,7 +95,7 @@ footer {
   }
   #formDiv {
   width: 70%;
-}
+  }
 }
 
 @media only screen and (min-width: 1200px) {
