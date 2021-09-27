@@ -11,6 +11,15 @@ cafe loco is an application that accesses a database of coffee and lets people a
 
 ## MVP/ Post-MVP
 
+####MVP
+- Interface that renders coffee data onto cards
+- function to vote on favorite coffee. This then sorts the coffee accordingly.
+- ability for users to submit a recipe to the database
+
+###Post-MVP
+- Learn more button on main page that sends them to an :id page
+- Style the home page
+
 ## Project Schedule
 
 ## Timeframes
