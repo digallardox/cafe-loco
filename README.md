@@ -32,7 +32,7 @@ https://api.airtable.com/v0/appVlLE3mPJTySm4A/Cafe%20Loco
         }
 
 ## Wireframes
-![](https://ibb.co/MD4tr0w)
+![](https://i.ibb.co/yn1Ztjv/Screen-Shot-2021-09-27-at-4-35-14-PM.png)
 
 
 ## Component Hierarchy
