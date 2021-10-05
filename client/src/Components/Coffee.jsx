@@ -17,7 +17,6 @@ const config = {
 function Coffee() {
     const [data, setData] = useState([]);
 
-    // Initialize Axios request
     useEffect(() => {
         const getData = async () => {
         const res = await axios.get(URL, config);
@@ -26,7 +25,6 @@ function Coffee() {
         }
         getData();
     },[]);
-    //test
 
     return (
         <>
