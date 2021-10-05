@@ -6,9 +6,10 @@ import { Helmet } from 'react-helmet';
 import NavBar from './Components/NavBar.jsx';
 import Coffee from './Components/Coffee.jsx';
 import Form from './Components/Form.jsx';
-import Rank from './Components/Rank';
+import Rank from './Components/Rank.jsx';
 import CoverIMG from './Components/CoverIMG.jsx';
-import PageNotFound from './Components/PageNotFound';
+import Details from './Components/Details.jsx';
+import PageNotFound from './Components/PageNotFound.jsx';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
 				</Route>
 				<Route exact path='/coffee'>
 					<Coffee />
+				</Route>
+				<Route exact path='/coffee/:id'>
+					<Details />
 				</Route>
 				<Route exact path='/rank'>
 					<Rank />

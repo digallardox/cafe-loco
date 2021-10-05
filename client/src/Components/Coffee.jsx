@@ -2,11 +2,12 @@ import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import { Card, Col} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
-const URL = `https://api.airtable.com/v0/${airtableBase}/tbl1RqNOIVfRyZhso?api_key=${airtableKey}`;
+const URL = `https://api.airtable.com/v0/${airtableBase}/Cafe%20Loco`;
 
 const config = {
     headers: {
@@ -21,13 +22,11 @@ function Coffee() {
         const getData = async () => {
         const res = await axios.get(URL, config);
         setData(res.data.records);
+        console.log(res.data.records);
         }
         getData();
     },[]);
 
-function handleLearn(){
-    console.log("trust");
-}
 
     return (
         <>
@@ -47,15 +46,17 @@ function handleLearn(){
                 <Card.Img variant="top" src={item.fields.image} />
                 <Card.Body>
                 <Card.Title>{item.fields.name}</Card.Title>
+                
                 <Card.Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec commodo mi, a interdum diam. Phasellus ac sapien eu nisl rutrum elementum.
                 </Card.Text>
+                <Link to={`/coffee/${item.id}`}>
                 <button
-                onClick={handleLearn}
                 type="submit"
                 id="voteButton">
                 Learn More
                 </button>
+                </Link>
                 </Card.Body>
             </Card>
             </Col>
