@@ -48,13 +48,13 @@ https://api.airtable.com/v0/appVlLE3mPJTySm4A/Cafe%20Loco
 
 ## MVP/ Post-MVP
 
-###MVP
+### MVP
 
 - Render data from Airtable onto DOM
 - Allow users to submit new data to Airtable
 - Create a voting and rank system
 
-###Post-MVP
+### Post-MVP
 - 'Learn More' page that gives more info about the clicked coffee
 - Style and animate the home screen
 
