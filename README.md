@@ -48,7 +48,7 @@ https://api.airtable.com/v0/appVlLE3mPJTySm4A/Cafe%20Loco
 
 ## MVP/ Post-MVP
 
-####MVP
+###MVP
 
 - Render data from Airtable onto DOM
 - Allow users to submit new data to Airtable
