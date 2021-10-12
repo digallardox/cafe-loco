@@ -1,14 +1,26 @@
 # Project Overview
 
-## Project Name
+## Project Name & Link
 
 Cafe Loco
+https://frosty-jang-faa304.netlify.app/
 
 ## Project Description
 
-Cafe Loco is an application that renders data from Airtable onto the DOM. This data will be pertaining to coffee. The rendered data will show a title, image, and description. The site also will allow users to  submit their own coffee to the database.
+Cafe Loco is an application that takes a database of different types of Coffee and renders it onto the screen. Through the application, users can add new coffee to the database and vote on their favorites. The voting function will count & display the total number of votes and order the coffee accordingly. The submitted coffee will also be instantly rendered on the application for users to see.
 
-The main function of the application is to allow users to vote on their preferred coffee and have the data organized according to number of likes. The application will render # of votes and place for each peice of coffee data.
+Languages:
+JS React
+HTML/CSS
+Axios
+React Bootstrap
+
+Dependencies:
+Axios
+React Router Dom
+React Helmet
+React Bootstrap
+
 
 ## API and Data Sample
 
@@ -46,37 +58,3 @@ https://api.airtable.com/v0/appVlLE3mPJTySm4A/Cafe%20Loco
 - 'Learn More' page that gives more info about the clicked coffee
 - Style and animate the home screen
 
-## Project Schedule
-
-| Day      | Deliverable                                | Status   |
-| -------- | ------------------------------------------ | -------- |
-| Oct 9-11 | Proposal Approval / Airtable Setup         | Complete |
-| Oct 12   | Component Creation / Get, Set, Delete Data | Complete |
-| Oct 13   | Oct. 12 cont'd / CSS Components            | Complete |
-| Oct 14   | CSS Components cont'd / MVP                | Complete |
-| Oct 15   | Styling                                    | Complete |
-
-## Timeframes
-
-|
-| Proposal                  |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Airtable setup            |    H     |     .5hrs      |      1hr      |     1hr     |
-| Clickable icons           |    H     |      1hrs      |      1hr      |     1hr     |
-| Data population pg 1      |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Data population pg 2      |    H     |      3hrs      |     2hrs      |    2hrs     |
-| Data population pg 3      |    H     |      3hrs      |     2hrs      |    2hrs     |
-| Form creation pg 1        |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Form creation pg 2        |    H     |      2hrs      |     1 hr      |    1 hr     |
-| Form creation pg 3        |    H     |      2hrs      |     1 hr      |     1hr     |
-| Data creation/update pg 1 |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Data creation/update pg 2 |    H     |      3hrs      |      1hr      |     1hr     |
-| Data creation/update pg 3 |    H     |      3hrs      |      1hr      |     1hr     |
-| Data deletion pg 1        |    H     |      2hrs      |      1hr      |     1hr     |
-| Data deletion pg 2        |    H     |      2hrs      |      1hr      |     1hr     |
-| Data deletion pg 3        |    H     |      2hrs      |      1hr      |     1hr     |
-| Component CSS pg 1        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Component CSS pg 2        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Component CSS pg 3        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Total                     |    H     |    42.5hrs     |     35hrs     |    35hrs 
-
-## SWOT Analysis
