@@ -49,11 +49,6 @@ function Coffee() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec commodo mi, a interdum diam. Phasellus ac sapien eu nisl rutrum elementum.
                 </Card.Text>
                 <Link to={`/coffee/${item.id}`}>
-                <button
-                type="submit"
-                id="voteButton">
-                Learn More
-                </button>
                 </Link>
                 </Card.Body>
             </Card>
