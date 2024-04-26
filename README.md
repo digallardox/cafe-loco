@@ -1,9 +1,10 @@
 ## Cafe Loco
-https://frosty-jang-faa304.netlify.app/
+Deployed Site:
+hrbxzdi7xtp120kilniqw5wsq.js.wpenginepowered.com
 
 ### Project Description
 
-Cafe Loco is an application that takes a database of different types of Coffee and renders it onto the screen. Through the application, users can add new coffee to the database and vote on their favorites. The voting function will count & display the total number of votes and order the coffee accordingly. The submitted coffee will also be instantly rendered on the application for users to see.
+Cafe Loco is a device response application that uses React.js as the front-end and Airtable as the database. Cafe Loco is a full CRUD application that allows authorized users to browse, update, delete, and create new coffee recipes. The unique functionality of the site is the "ranking" page which let's users cast positive and negative votes for coffee recipes they like and dislike. The app orders the coffee recipes according to their rank!
 
 
 ### Front-End Application:
