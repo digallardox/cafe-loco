@@ -1,7 +1,8 @@
+import styles from "./Footer.module.css"
 
-function Footer(){
+const Footer = () => {
     return (
-        <footer>
+        <footer id={styles.footer}>
             <p id="footerText">Cafe Loco 2021 ©</p>
         </footer>
     )};

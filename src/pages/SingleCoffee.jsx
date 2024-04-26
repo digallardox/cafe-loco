@@ -12,7 +12,7 @@ const config = {
         Authorization: `Bearer ${airtableKey}`,
     }};
 
-export default function Details(){
+export default function SingleCoffee(){
     const [coffee, setCoffee] = useState({});
     const { id } = useParams();
 
