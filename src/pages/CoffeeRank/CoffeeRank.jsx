@@ -44,7 +44,6 @@ const downVote = async (id, votes) => {
     return (
         <>
             <h2 className="pageTitle">Coffee Ranking</h2>
-
             {data.map((item, index) => (
             <div id={styles.gridParent}>
             {/* <div class="shadow p-3 mb-5 bg-white rounded"> */}

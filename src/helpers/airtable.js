@@ -7,13 +7,20 @@ export const AIRTABLE_CONFIG = {
     }};
 
 export const getCoffees = async () => {
-    return await axios.get(AIRTABLE_API, AIRTABLE_CONFIG);
+    // const existingData = localStorage.getItem("allCoffee")
+    // if (existingData) {
+    //     return JSON.parse(existingData)
+    // }
+    const res = await axios.get(AIRTABLE_API, AIRTABLE_CONFIG)
+    const nodes = res.data.records
+    // localStorage.setItem("allCoffee", JSON.stringify(nodes))
+    return nodes
 }
 
-export const updateCoffee = () => {
+// export const updateCoffee = () => {
 
-}
+// }
 
-export const getCoffee = () => {
+// export const getCoffee = () => {
     
-}
+// }

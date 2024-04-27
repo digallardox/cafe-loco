@@ -1,28 +1,26 @@
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
-import { Children, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card, Col} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Form from '../../components/Form/Form.jsx';
 import styles from "./Coffees.module.css"
-import { AIRTABLE_API, AIRTABLE_CONFIG, getCoffees } from '../../helpers/airtable.js';
+import { getCoffees } from '../../helpers/airtable.js';
 import { handleSearch } from '../../utils/search.js';
 
-const ACCESS_TOKEN = localStorage.getItem("accessToken") || null
 function Coffees() {
     const [coffees, setCoffees] = useState([]);
 
     useEffect(() => {
-        const getCoffees = async () => {
+        const getData = async () => {
         const coffees = await getCoffees()
-        setCoffees(coffees.data.records);
+        setCoffees(coffees);
         }
-        getCoffees();
+        getData();
     }, [])
 
     return (
         <>
-
             <div id={styles.header}>
                 <div id={styles.headerText}>
                     Welcome to the wonderful world of coffee!<br/>

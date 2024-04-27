@@ -1,3 +1,3 @@
 export const handleSearch = () => {
-    return
+    const nodes = localStorage.getItem("allCoffee")
 }
