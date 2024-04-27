@@ -1,4 +1,4 @@
-import Navbar from "../Navbar";
+import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Helmet } from 'react-helmet';
 import styles from "./Layout.module.css"

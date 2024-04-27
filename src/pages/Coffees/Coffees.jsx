@@ -5,33 +5,38 @@ import { Card, Col} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Form from '../../components/Form/Form.jsx';
 import styles from "./Coffees.module.css"
-import { AIRTABLE_API, AIRTABLE_CONFIG } from '../../helpers/airtable.js';
+import { AIRTABLE_API, AIRTABLE_CONFIG, getCoffees } from '../../helpers/airtable.js';
+import { handleSearch } from '../../utils/search.js';
 
+const ACCESS_TOKEN = localStorage.getItem("accessToken") || null
 function Coffees() {
     const [coffees, setCoffees] = useState([]);
 
     useEffect(() => {
         const getCoffees = async () => {
-        const res = await axios.get(AIRTABLE_API, AIRTABLE_CONFIG);
-        console.log(res)
-        setCoffees(res.data.records);
+        const coffees = await getCoffees()
+        setCoffees(coffees.data.records);
         }
         getCoffees();
     }, [])
 
     return (
         <>
-            {/* <h2 className="pageTitle">All Coffee</h2> */}
 
-            {/* <div className="cardsDiv"> */}
             <div id={styles.header}>
                 <div id={styles.headerText}>
                     Welcome to the wonderful world of coffee!<br/>
-                    Find a recipe below or add your own
+                    Find a recipe below or <Link to="submit-coffee">add your own</Link> &#9749; &#65039;
                 </div>
-            <Form />
+                
             </div>
-
+            <input 
+            id={styles.searchbar}
+            type="text"
+            placeholder='Search...'
+            onChange={handleSearch}
+            />
+            
             <div id={styles.flexContainer}>
             {/* <div id={styles.flexRow}> */}
 
@@ -48,10 +53,10 @@ function Coffees() {
                 <Card.Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec commodo mi, a interdum diam. Phasellus ac sapien eu nisl rutrum elementum.
                 </Card.Text>
-                <button id={styles.button}>
-                    Learn more =>
-                </button>
                 <Link to={`/coffee/${coffee.id}`}>
+                <button id={styles.button}>
+                    Learn more &rarr;
+                </button>
                 </Link>
                 </Card.Body>
             </Card>
@@ -60,8 +65,6 @@ function Coffees() {
             </div>
             ))}
             </div>
-            {/* </div> */}
-            {/* </div> */}
         </>
     )};
 

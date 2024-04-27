@@ -1,0 +1,33 @@
+#authButton {
+    display: inline;
+    cursor: pointer;
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+#list {
+    display: inline;
+}
+
+.navItem {
+    padding: 0 20px;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: bisque;
+    padding: 15px 0;
+    align-items: center;
+}
+
+#title {
+    font-size: x-large;
+}

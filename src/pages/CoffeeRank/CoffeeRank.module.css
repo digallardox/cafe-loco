@@ -1,0 +1,36 @@
+#gridParent {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    margin: 30px 0;
+}
+
+#cardContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cardText {
+    max-width: 600px;
+}
+
+#img {
+    width: 200px;
+}
+
+#cardTitle {
+    font-size: large;
+}
+
+#circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid white;
+  width: 62px;
+  height: 62px;
+  padding: 16px 10px 10px 10px;
+  margin: -15px 10px 10px 10px;
+  text-align: center;
+  background-color: #332924;
+}
