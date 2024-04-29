@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import { Layout } from './components/Layout/Layout.jsx';
 import Coffees from './pages/Coffees/Coffees.jsx';
-import SingleCoffee from './pages/SingleCoffee.jsx';
+import SingleCoffee from './pages/SingleCoffee/SingleCoffee.jsx';
 import SubmitCoffee from './pages/SubmitCoffe/SubmitCoffee.jsx';
 import CoffeeRank from "./pages/CoffeeRank/CoffeeRank.jsx"
 import is404 from './components/is404.jsx';

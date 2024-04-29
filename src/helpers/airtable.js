@@ -21,6 +21,6 @@ export const getCoffees = async () => {
 
 // }
 
-// export const getCoffee = () => {
-    
-// }
+export const getSingleCoffee = async (id) => {
+    return await axios.get(`${AIRTABLE_API}/${id}`, AIRTABLE_CONFIG);
+}

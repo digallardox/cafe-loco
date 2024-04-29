@@ -1,0 +1,14 @@
+#pageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+#image {
+    max-width: 600px;
+}
+
+#text {
+    margin: 0 40px;
+}
