@@ -1,15 +1,10 @@
 import { Link } from 'react-router-dom';
-import { signInWithGooglePopup, signOutGoogle } from "../../helpers/firebase"
+import { googleOAuthLogin, signOutGoogle } from "../../helpers/firebase"
 import styles from "./Navbar.module.css"
 
 const Navbar = () => {
   const ACCESS_TOKEN = localStorage.getItem("accessToken")
 
-  const googleOAuthLogin = async () => {
-    const response = await signInWithGooglePopup();
-    localStorage.setItem("accessToken", response.user.accessToken)
-    window.location.reload();
-}
   return (
   <nav id={styles.nav}>
     <Link

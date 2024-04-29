@@ -20,21 +20,27 @@
     transition: all 0.1s;
 }
 
+#z {
+    width: 100%;
+    margin: 0 auto;
+}
+
 #flexChild:hover {
     cursor: pointer;
     transform: scale(1.025);
 }
 
 #header {
-    margin: 40px 0;
+    margin-bottom: 60px;
     display: flex;
     justify-content: space-around;
 }
 
 #searchbar {
-    max-width: 70%;
+    max-width: 100%;
     min-width: 50%;
-    margin: 10px 0 20px 0;
+    margin-bottom: 40px;
+    
 }
 
 #shadow {

@@ -4,8 +4,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/
 const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY
 
 const firebaseConfig = {
-    apiKey: API_KEY,
-    authDomain: "cafe-loco.firebaseapp.com",
+  apiKey: API_KEY,
+  authDomain: "cafe-loco.firebaseapp.com",
   projectId: "cafe-loco",
   storageBucket: "cafe-loco.appspot.com",
 };
@@ -21,6 +21,14 @@ provider.setCustomParameters({
 export const auth = getAuth(app);
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
+export const googleOAuthLogin = async () => {
+  const res = await signInWithGooglePopup();
+  if ( res.user.accessToken) {
+    localStorage.setItem("accessToken", "true")
+  }
+  window.location.reload();
+}
+
 export const signOutGoogle = () => signOut(auth).then(() => {
     localStorage.removeItem("accessToken");
     console.log("logged out")
@@ -28,3 +36,4 @@ export const signOutGoogle = () => signOut(auth).then(() => {
   }).catch((error) => {
     console.log("error")
   });
+

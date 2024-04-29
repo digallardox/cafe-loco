@@ -29,6 +29,7 @@ const upVote = async (id, votes) => {
         return
     }
         await axios.patch(`${AIRTABLE_API}/${id}`, {fields: {votes: votes + 1}}, AIRTABLE_CONFIG);
+        localStorage.removeItem("allCoffee")
         setToggle(toggle => !toggle);
     };
 
@@ -38,12 +39,14 @@ const downVote = async (id, votes) => {
         return
     }
         await axios.patch(`${AIRTABLE_API}/${id}`, {fields: {votes: votes - 1}}, AIRTABLE_CONFIG);
+        localStorage.removeItem("allCoffee")
         setToggle(toggle => !toggle);
     };
 
     return (
         <>
             <h2 className="pageTitle">Coffee Ranking</h2>
+            <div id="container">
             {data.map((item, index) => (
             <div id={styles.gridParent}>
             {/* <div class="shadow p-3 mb-5 bg-white rounded"> */}
@@ -62,10 +65,11 @@ const downVote = async (id, votes) => {
                 id={styles.cardTitle}
                 >{item.fields.name}</div>
                 
-                <p>{item.fields.votes} likes</p>
+                
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec commodo mi, a interdum diam. Phasellus ac sapien eu nisl rutrum elementum.
                 </div>
                 <div>
+                <p>{item.fields.votes} likes</p>
                 <button type="submit"
                 id="voteButton"
                 onClick={()=> upVote(item.id, item.fields.votes)}>
@@ -81,6 +85,7 @@ const downVote = async (id, votes) => {
             </div>
             </div>
             ))}
+            </div>
         </>
     )};
 

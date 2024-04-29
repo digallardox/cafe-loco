@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Card, Col} from 'react-bootstrap';
-import { Prev } from 'react-bootstrap/esm/PageItem';
 import { AIRTABLE_API, AIRTABLE_CONFIG } from '../../helpers/airtable';
 import styles from "./Form.module.css"
 

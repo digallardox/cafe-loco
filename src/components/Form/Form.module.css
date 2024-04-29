@@ -4,6 +4,7 @@
     border-radius: 10px;
     transition: all .1s;
     background-color: tan;
+    margin-top: 40px;
 }
 
 #button:hover {
@@ -14,11 +15,13 @@
     width: 100%;
     border: 1px solid black;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 #form {
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
+    background-color: #d3d3d3;
 }
 
 #shadow {
